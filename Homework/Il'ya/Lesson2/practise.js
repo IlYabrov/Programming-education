@@ -6,33 +6,35 @@
 
 function someFunction(num1, num2, str) {
 	if (!checkNumberType(num1, num2)) {
-		throw new Error('Херня, переделывай!!!!!!')
+		throw new Error('Херня, переделывай!!!!!!');
 	}
 
-	sum = Math.floor(num1 + num2)
+	sum = Math.floor(num1 + num2);
 
 	if (sum > 3) {
-		let resultObject = {}
-		resultObject[str] = num1 * num2
-		return resultObject
+		let resultObject = {};
+		resultObject[str] = num1 * num2;
+		return resultObject;
 	}
 
 	while (sum <= 3) {
-		sum += 1
+		sum += 1;
 	}
-	return makeObjectPerson('Ilya', 20)
+	return makeObjectPerson('Ilya', 20);
 }
 
 function makeObjectPerson(name, age) {
 	return (person = {
 		name: name,
 		age: age,
-	})
+	});
 }
 
 function checkNumberType(num1, num2) {
-	return !isNaN(Number(num1)) && !isNaN(Number(num2))
+	return !isNaN(Number(num1)) && !isNaN(Number(num2));
 }
 
 // Пример вызова
-console.log(someFunction(89, 44, 'gachiPower'))
+console.log(someFunction(89, 44, 'gachiPower'));
+
+console.log(someFunction(87, 98, 'gachiPower'));
